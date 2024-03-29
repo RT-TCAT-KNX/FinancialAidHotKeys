@@ -1,4 +1,5 @@
 ﻿::accd::accepted
+::achecl::Anderson County Higher Education Center
 ::addl::additional
 ::addn::addition
 ::addy::additionally
@@ -17,12 +18,15 @@
 ::ay::aid year
 ::ayec::at your earliest convenience
 ::bachdeg::bachelor's degree
-::blnt::Blount County
+::blntco::Blount County
 ::cert::certification
 ::certd::certified
 ::certs::certifications
 ::chk::check
 ::dchk::double-check
+::cr::credit
+::del::dual enrollment
+::decr::dual enrollment credit
 ::cmplt::complete
 ::cmpltd::completed
 ::disb::disburse
@@ -31,10 +35,12 @@
 ::disbt::disbursement
 ::disbts::disbursements
 ::doc::document
+::docd::documented
 ::docn::documentation
 ::docs::documents
 ::edoppcen::Educational Opportunity Center
 ::efc::EFC
+::efcl::Expected Family Contribution
 ::elgl::eligible
 ::elgy::eligibility
 ::enrl::enroll
@@ -50,7 +56,7 @@
 ::gs::GlobalScapes
 ::hrs::hours
 ::incard::incarcerated
-::inf::informed
+::infd::informed
 ::infn::information
 ::instcn::instruction
 ::instcns::instructions
@@ -58,6 +64,8 @@
 ::insuff::insufficient
 ::irs::IRS
 ::isir::ISIR
+::maxl::maximum
+::minl::minimum
 ::offl::official
 ::orientn::orientation
 ::pelll::Federal Pell Grant
@@ -78,8 +86,20 @@
 ::rprcsg::reprocessing
 ::prcss::processes
 ::prgm::program
+::prgmlen::program length
+::progn::progression
 ::prt::portal
-::reconc::reconciliation
+::qy::qualify
+::qys::qualifies
+::qyg::qualifying
+::qy4::qualify for
+::qys4::qualifies for
+::donq::do not qualify
+::dsnq::does not qualify
+::recone::reconcile
+::recones::reconciles
+::recond::reconciled
+::reconn::reconciliation
 ::rcvd::received
 ::rcv::receive
 ::rprt::report
@@ -87,13 +107,19 @@
 ::reqd::requested
 ::reqt::requirement
 ::reqts::requirements
+::rswl::Ruth and Steve West Workforce Development Center
 ::rvw::review
+::sai::SAI
+::saill::Student Aid Index
 ::slct::select
 ::slctd::selected
 ::stu::student
 ::stus::students
+::stuserv::Student Services
 ::tcat::TCAT
 ::tcatl::Tennessee College of Applied Technology
+::tcatknx::TCAT Knoxville
+::tcatknxl::Tennessee College of Applied Technology Knoxville
 ::trt::Tax Return Transcript
 ::tbr::TBR
 ::tbrl::Tennessee Board of Regents
@@ -101,6 +127,8 @@
 ::trm::term
 ::trmstr::trimester
 ::tsac::TSAC
+::tsacl::Tennessee Student Assistance Corporation
+::unco::Union County
 ::unoff::unofficial
 ::updt::update
 ::updtd::updated
@@ -119,6 +147,7 @@ return
 
 ::rflw::RT-TEST
 ::rhac::RHACOMM
+::roarm::ROARMAN
 ::roapl::ROAPELL
 ::rnims::RNIMS24
 ::rnana::RNANA24
@@ -127,33 +156,41 @@ return
 ::saa::SAAADMS
 return
 
+::admem::admissions@tcatknoxville.edu
 ::irsw::https://irs.gov
 ::irsreqtranw::https://www.irs.gov/individuals/get-transcript
 ::4506w::https://www.irs.gov/pub/irs-pdf/f4506.pdf
 ::prtw::https://portal.tbr.edu
 ::fsaw::https://studentaid.gov
-::finaid::finaid@tcatknoxville.edu
-::finaidm::mailto:finaid@tcatknoxville.edu
-::prgrmw::https://tcatknoxville.edu/programs
+::faem::finaid@tcatknoxville.edu
+::prgmw::https://tcatknoxville.edu/programs
 ::stuservem::studentservices@tcatknoxville.edu
-::stuservemm::mailto:studentservices@tcatknoxville.edu
 ::tcatadd::1100 Liberty St
 return
 
 ::2324l::2023-2024
+::2425l::2024-2025
 ::2330l::202330
 ::2410l::202410
 ::2420l::202420
 ::2430l::202430
+::2510l::202510
+::2520l::202520
+::2530l::202530
 ::23su::Summer 2023
 ::23fa::Fall 2023
 ::24sp::Spring 2024
+::24su::Summer 2024
+::24fa::Fall 2024
+::25sp::Spring 2025
+::25su::Summer 2025
 ::suhead::summer header
 ::sutrail::summer trailer
 return
 
 ::awtransn::Awaiting transaction
 ::nefcc::No EFC change.
+::nsaic::No SAI change.
 ::nctisir::No changes to ISIR.
 ::sdnhbd::Student does not have bachelor's degree.
 ::urptv::Updated ROAPELL to "Verified."
@@ -166,6 +203,11 @@ return
 
 :*:dfrmt::
 FormatTime, CurrentDateTime,, yyyy_MM_dd
+SendInput %CurrentDateTime%
+return
+
+:*:tsacdfrmt::
+FormatTime, CurrentDateTime,, ddMMyyyy
 SendInput %CurrentDateTime%
 return
 
